@@ -1,13 +1,13 @@
 cask "voicebridge" do
-  version "0.4"
-  sha256 "6d0261d816af58283905efb33efb8605a63f0a88f93a8b340096be7117041c8b"
+  version "0.4.1"
+  sha256 "bb0d41f591bdd2b22dcd43cc613c3918b90f738edb29e79bf0ecad12ac37fce1"
 
   url "https://github.com/DukeLog/homebrew-apps/releases/download/voicebridge-#{version}/VoiceBridge-#{version}.zip"
   name "VoiceBridge"
   desc "Push-to-talk dictation with fully on-device speech recognition"
   homepage "https://github.com/DukeLog/homebrew-apps"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "VoiceBridge.app"
