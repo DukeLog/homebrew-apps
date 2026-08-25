@@ -1,3 +1,9 @@
+# DukeLog's apps
+
+Homebrew tap. Install any app as `brew install --cask dukelog/apps/<name>`.
+
+---
+
 # VoiceBridge
 
 Push-to-talk dictation for macOS. Hold a key anywhere, speak, release — the recognized
@@ -11,7 +17,7 @@ tech terms. English and Spanish are supported too.
 ## Install
 
 ```sh
-brew install --cask dukelog/voicebridge/voicebridge
+brew install --cask dukelog/apps/voicebridge
 ```
 
 Requirements: Apple Silicon, macOS 14 (Sonoma) or newer.
