@@ -1,6 +1,6 @@
 cask "voicebridge" do
-  version "0.3"
-  sha256 "3c0ed6944fafefb9b40051e2bb56652c2d5fa958bb7e1380f07cd9a0fc40cfb1"
+  version "0.4"
+  sha256 "6d0261d816af58283905efb33efb8605a63f0a88f93a8b340096be7117041c8b"
 
   url "https://github.com/DukeLog/homebrew-apps/releases/download/voicebridge-#{version}/VoiceBridge-#{version}.zip"
   name "VoiceBridge"
