@@ -1,10 +1,10 @@
 cask "voicebridge" do
-  version "0.4.1"
-  sha256 "bb0d41f591bdd2b22dcd43cc613c3918b90f738edb29e79bf0ecad12ac37fce1"
+  version "0.5.0"
+  sha256 "b938de712e952821846814177d2bdb6424d6557fcc5bbaf1d7babe1069e69cdf"
 
   url "https://github.com/DukeLog/homebrew-apps/releases/download/voicebridge-#{version}/VoiceBridge-#{version}.zip"
   name "VoiceBridge"
-  desc "Push-to-talk dictation with fully on-device speech recognition"
+  desc "On-device push-to-talk dictation and meeting transcription"
   homepage "https://github.com/DukeLog/homebrew-apps"
 
   depends_on macos: :sonoma
@@ -13,8 +13,8 @@ cask "voicebridge" do
   app "VoiceBridge.app"
 
   zap trash: [
-    "~/Library/Application Support/VoiceBridge",
     "~/.cache/voice-bridge",
+    "~/Library/Application Support/VoiceBridge",
     "~/Library/Preferences/com.dukelog.voicebridge.plist",
   ]
 
@@ -25,6 +25,10 @@ cask "voicebridge" do
       - Microphone      (to hear you)
       - Accessibility   (to paste the recognized text)
     Then hold fn anywhere, speak, release.
+
+    Meetings: ctrl-option-cmd-M records a call (your microphone plus what you
+    hear) and transcribes it on-device; the first recording asks for one more
+    permission, System Audio Recording.
 
     Downloaded models live in ~/.cache/huggingface and are shared with other
     tools; uninstalling the cask does not remove them.

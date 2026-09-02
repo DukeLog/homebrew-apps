@@ -39,10 +39,20 @@ the text). Then hold `fn`, speak, release.
 - Long recordings are chunked at natural pauses, so hour-long dictations work.
 - Dictation speed statistics.
 
+## Meetings
+
+Record a call from any conferencing app — your microphone plus everything you hear in
+your headphones — and get a transcript, all on-device. `⌃⌥⌘M` (configurable) or the
+menu bar item starts and stops the recording; the Meetings section keeps the recordings
+with their transcripts, search and a player. Who-said-what labeling is optional: install
+the extra models from Settings → Meetings, mark a few speakers by hand and the app labels
+the rest of the conversation by voice. The first recording asks for one more permission —
+**System Audio Recording** (to hear the other side of the call).
+
 ## Privacy
 
-Everything is local: recognition, history, audio archive. The app makes network
-requests only to download models from Hugging Face.
+Everything is local: recognition, history, audio archive, meeting recordings and
+transcripts. The app makes network requests only to download models from Hugging Face.
 
 ## Updates
 
@@ -64,3 +74,9 @@ brew upgrade --cask voicebridge
 При первом запуске приложение само ставит окружение и модель (~1,5 ГБ, один раз)
 и попросит два разрешения: Микрофон и Универсальный доступ (для вставки текста).
 Дальше — зажать `fn` и говорить.
+
+Совещания: `⌃⌥⌘M` пишет созвон из любой конференц-программы (свой микрофон плюс всё,
+что слышно в наушниках) и расшифровывает его локально; раздел «Совещания» хранит
+записи, расшифровки, поиск и плеер. Разметка говорящих — по желанию: доставить модели
+в настройках, разметить пару реплик руками, остальное приложение разложит по голосам.
+Первая запись попросит третье разрешение — «Запись системного звука».
