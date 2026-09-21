@@ -1,6 +1,6 @@
 cask "voicebridge" do
-  version "0.5.0"
-  sha256 "b938de712e952821846814177d2bdb6424d6557fcc5bbaf1d7babe1069e69cdf"
+  version "0.6.0"
+  sha256 "526b08b709766fb02949de822451674c3d4de05eaff3dfd2720c15d8a87821bc"
 
   url "https://github.com/DukeLog/homebrew-apps/releases/download/voicebridge-#{version}/VoiceBridge-#{version}.zip"
   name "VoiceBridge"
@@ -24,7 +24,10 @@ cask "voicebridge" do
     Hugging Face). It will ask for two permissions:
       - Microphone      (to hear you)
       - Accessibility   (to paste the recognized text)
-    Then hold fn anywhere, speak, release.
+    Then hold fn anywhere, speak, release. While you hold it, a panel above
+    everything shows a rough draft of what you are saying, so you can tell the
+    microphone is hearing you; drag it anywhere, or switch it off in Settings.
+    The pasted text is the full-quality recognition, not that draft.
 
     Meetings: ctrl-option-cmd-M records a call (your microphone plus what you
     hear) and transcribes it on-device; the first recording asks for one more
