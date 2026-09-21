@@ -1,6 +1,6 @@
 cask "voicebridge" do
-  version "0.6.0"
-  sha256 "526b08b709766fb02949de822451674c3d4de05eaff3dfd2720c15d8a87821bc"
+  version "0.6.1"
+  sha256 "4c5eae617df69c322b34b8305d3019e73bfee9a9bedc8650a1b027b2f916168d"
 
   url "https://github.com/DukeLog/homebrew-apps/releases/download/voicebridge-#{version}/VoiceBridge-#{version}.zip"
   name "VoiceBridge"
@@ -11,6 +11,11 @@ cask "voicebridge" do
   depends_on arch: :arm64
 
   app "VoiceBridge.app"
+
+  # Without this the upgrade replaces the bundle underneath the running process,
+  # which then wedges and stops answering even SIGTERM. VoiceBridge lives in the
+  # menu bar with no dock icon, so that failure is silent: dictation simply stops.
+  uninstall quit: "com.dukelog.voicebridge"
 
   zap trash: [
     "~/.cache/voice-bridge",
@@ -24,6 +29,9 @@ cask "voicebridge" do
     Hugging Face). It will ask for two permissions:
       - Microphone      (to hear you)
       - Accessibility   (to paste the recognized text)
+    After an upgrade VoiceBridge is quit and not started again — Homebrew never
+    relaunches apps. Launch it once from Applications.
+
     Then hold fn anywhere, speak, release. While you hold it, a panel above
     everything shows a rough draft of what you are saying, so you can tell the
     microphone is hearing you; drag it anywhere, or switch it off in Settings.
